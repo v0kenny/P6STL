@@ -10,7 +10,23 @@ int main() {
     std::cout << "Cars: " << cars << "\n";
 
     // TODO: print the average price and price range
-    std::cout << "The average price is: $" << "TODO" << "\n";
+    std::vector<Car> carList = cars;
+    std::vector<double> priceCar;
 
-    std::cout << "The range is: $" << "TODO" << "\n";
+    for (Car i : carList) {
+        priceCar.push_back(i.price());
+    }
+    double averagePriceCar = 0;
+    averagePriceCar = std::accumulate(priceCar.begin(), priceCar.end(), 0);
+    std::cout << "The average price is: $" << averagePriceCar << "\n";
+    double maxPrice = 0;
+    maxPrice = *std::max_element(priceCar.begin(), priceCar.end());
+
+    double minPrice = 0;
+    minPrice = *std::min_element(priceCar.begin(), priceCar.end());
+    double range = 0;
+
+    range = maxPrice - minPrice;
+
+    std::cout << "The range is: $" << range << "\n";
 }
