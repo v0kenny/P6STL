@@ -48,7 +48,7 @@ int main() {
 
     // TODO: arrange `taggedCars` so that the elements tagged `true` are at the beginning
     //  and `false` elements are at the ened
-    std::partition(std::begin(taggedCars), std::end(taggedCars), getCarTagged);
+    std::partition(taggedCars.begin(), taggedCars.end(), getCarTagged);
 
     std::cout << "Tagged Cars: " << taggedCars << "\n";
 }
