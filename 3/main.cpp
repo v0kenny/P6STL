@@ -4,7 +4,7 @@
 #include <string>
 #include "Utility.h"
 #include "Car.h"
-
+#include <numeric>
 int main() {
     auto cars = randomCars();
     std::cout << "Cars: " << cars << "\n";
